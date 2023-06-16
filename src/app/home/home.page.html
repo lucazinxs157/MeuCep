@@ -1,0 +1,115 @@
+<ion-content class="fundo" [fullscreen]="true">
+  <div class="espaco">
+    <ion-row style="margin-top: 30px">
+      <ion-col>
+        <ion-item class="rounderInput" line="none">
+          <ion-label position="floating"
+            >CEP <span style="color: red">*</span></ion-label
+          >
+          <ion-input
+            type="text"
+            expand="block"
+            style="color: #222"
+            placeholder="00000-000"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 65px">
+      <ion-col>
+        <ion-item class="rounderInput" line="none">
+          <ion-label position="floating"
+            >Número<span style="color: red">*</span></ion-label
+          >
+          <ion-input
+            type="text"
+            expand="block"
+            style="color: #222"
+            placeholder="EX: 1000"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 65px">
+      <ion-col>
+        <ion-item class="rounderInput" line="none">
+          <ion-label position="floating">Complemeto</ion-label>
+          <ion-input
+            type="text"
+            expand="block"
+            style="color: #222"
+            placeholder="Casa, apto"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 65px">
+      <ion-col>
+        <ion-item class="rounderInput" line="none">
+          <ion-label position="floating">Rua </ion-label>
+          <ion-input
+            type="text"
+            expand="block"
+            style="color: #222"
+            placeholder="Rua"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 65px">
+      <ion-col>
+        <ion-item class="rounderInput" line="none">
+          <ion-label position="floating">Bairro</ion-label>
+          <ion-input
+            type="text"
+            expand="block"
+            style="color: #222"
+            placeholder="Bairro"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 65px">
+      <ion-col>
+        <ion-item class="rounderInput" line="none">
+          <ion-label position="floating">Cidade </ion-label>
+          <ion-input
+            type="text"
+            expand="block"
+            style="color: #222"
+            placeholder="Cidade"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 65px">
+      <ion-col>
+        <ion-item class="rounderInput" line="none">
+          <ion-label position="floating">Estado</ion-label>
+          <ion-input
+            type="text"
+            expand="block"
+            style="color: #222"
+            placeholder="Estado"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col class="espaco">
+      <ion-button shape="block" color="secondary" (click)="confirmar()"
+        >Cadastrar</ion-button
+      >
+    </ion-col>
+  </ion-row>
+</ion-footer>

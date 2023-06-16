@@ -1,0 +1,7 @@
+{
+  "name": "MeuCep",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
