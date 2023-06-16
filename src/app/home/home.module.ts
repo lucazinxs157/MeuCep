@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
+import { HomePage } from './home.page';
 
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { HomePageRoutingModule } from './home-routing.module';
 
-import { AppComponent } from '../app.component';
-import { AppRoutingModule } from '../app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
-  declarations: [AppComponent],
   imports: [
-    HttpClientModule,
-    BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-    providers: [{ provide: RouteReuseStrategy, useClass:
-    IonicRouteStrategy}],
-    bootstrap: [AppComponent],
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule
+  ],
+  declarations: [HomePage]
 })
-export class AppModule {}
+export class HomePageModule {}
