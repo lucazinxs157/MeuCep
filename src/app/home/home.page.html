@@ -1,3 +1,4 @@
+
 <ion-content class="fundo" [fullscreen]="true">
   <div class="espaco">
     <ion-row style="margin-top: 30px">
@@ -11,12 +12,14 @@
             expand="block"
             style="color: #222"
             placeholder="00000-000"
+            (ionChange)="searchCEP($event)"
+            maxlength="8"
           ></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <ion-row style="margin-top: 65px">
+    <ion-row >
       <ion-col>
         <ion-item class="roundeInput" line="none">
           <ion-label position="floating"
@@ -27,12 +30,13 @@
             expand="block"
             style="color: #222"
             placeholder="EX: 1000"
+            [(ngModel)]="endereco.numero"
           ></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <ion-row style="margin-top: 65px">
+    <ion-row >
       <ion-col>
         <ion-item class="roundeInput" line="none">
           <ion-label position="floating">Complemeto</ion-label>
@@ -41,12 +45,13 @@
             expand="block"
             style="color: #222"
             placeholder="Casa, apto"
+            [(ngModel)]="endereco.Complemeto"
           ></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <ion-row style="margin-top: 65px">
+    <ion-row>
       <ion-col>
         <ion-item class="roundeInput" line="none">
           <ion-label position="floating">Rua </ion-label>
@@ -55,12 +60,13 @@
             expand="block"
             style="color: #222"
             placeholder="Rua"
+            [(ngModel)]="endereco.endereco"
           ></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <ion-row style="margin-top: 65px">
+    <ion-row>
       <ion-col>
         <ion-item class="roundeInput" line="none">
           <ion-label position="floating">Bairro</ion-label>
@@ -69,12 +75,13 @@
             expand="block"
             style="color: #222"
             placeholder="Bairro"
+            [(ngModel)]="endereco.bairro"
           ></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <ion-row style="margin-top: 65px">
+    <ion-row>
       <ion-col>
         <ion-item class="roundeInput" line="none">
           <ion-label position="floating">Cidade </ion-label>
@@ -83,12 +90,13 @@
             expand="block"
             style="color: #222"
             placeholder="Cidade"
+            [(ngModel)]="endereco.cidade"
           ></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <ion-row style="margin-top: 65px">
+    <ion-row>
       <ion-col>
         <ion-item class="roundeInput" line="none">
           <ion-label position="floating">Estado</ion-label>
@@ -97,6 +105,7 @@
             expand="block"
             style="color: #222"
             placeholder="Estado"
+            [(ngModel)]="endereco.estado"
           ></ion-input>
         </ion-item>
       </ion-col>
@@ -107,8 +116,7 @@
 <ion-footer>
   <ion-row>
     <ion-col class="espaco">
-      <ion-button shape="block" color="secondary"         >Cadastrar</ion-button
-      >
+      <ion-button shape="block" color="success" (click)="cadastrar()">Cadastrar</ion-button>
     </ion-col>
   </ion-row>
 </ion-footer>
